@@ -15,12 +15,17 @@ import {
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
-const userIcon = new L.Icon({
-  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41]
-})
+const userIcon =
+  typeof window !== 'undefined'
+    ? new L.Icon({
+        iconUrl:
+          'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+        shadowUrl:
+          'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41]
+      })
+    : undefined
 
 const floodZone: [number, number][] = [
   [35.6385, 139.6900],
