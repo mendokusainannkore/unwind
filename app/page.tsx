@@ -22,14 +22,14 @@ const userIcon = new L.Icon({
   iconAnchor: [12, 41]
 })
 
-const floodZone = [
+const floodZone: [number, number][] = [
   [35.6385, 139.6900],
   [35.6425, 139.6940],
   [35.6395, 139.7000],
   [35.6355, 139.6960]
 ]
 
-const fireRiskZone = [
+const fireRiskZone: [number, number][] = [
   [35.6280, 139.7050],
   [35.6320, 139.7100],
   [35.6290, 139.7160],
